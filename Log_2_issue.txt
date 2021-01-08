@@ -1,0 +1,640 @@
+I (48) boot: ESP-IDF v4.2-dev-2084-g98d5b5dfd-dirty 2nd stage bootloader
+I (49) boot: compile time 15:51:33
+I (49) boot: chip revision: 0
+I (52) boot.esp32s2: SPI Speed      : 80MHz
+I (57) boot.esp32s2: SPI Mode       : DIO
+I (62) boot.esp32s2: SPI Flash Size : 4MB
+I (67) boot: Enabling RNG early entropy source...
+I (72) boot: Partition Table:
+I (76) boot: ## Label            Usage          Type ST Offset   Length
+I (83) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (90) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (98) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (105) boot:  3 ota_0            OTA app          00 10 00010000 001e0000
+I (113) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000
+I (120) boot:  5 coredump         Unknown data     01 03 003d0000 00010000
+I (128) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000
+I (136) boot: End of partition table
+I (140) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f000020 size=0x2c09c (180380) map
+I (186) esp_image: segment 1: paddr=0x0003c0c4 vaddr=0x3ffc8ac0 size=0x03f54 ( 16212) load
+I (191) esp_image: segment 2: paddr=0x00040020 vaddr=0x40080020 size=0xc6ea8 (814760) map
+0x40080020: _stext at ??:?
+
+I (363) esp_image: segment 3: paddr=0x00106ed0 vaddr=0x3ffcca14 size=0x00aa4 (  2724) load
+I (364) esp_image: segment 4: paddr=0x0010797c vaddr=0x40024000 size=0x00404 (  1028) load
+0x40024000: _WindowOverflow4 at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730
+
+I (370) esp_image: segment 5: paddr=0x00107d88 vaddr=0x40024404 size=0x146b4 ( 83636) load
+I (412) boot: Loaded app from partition at offset 0x10000
+I (412) boot: Disabling RNG early entropy source...
+I (413) cache: Instruction cache        : size 8KB, 4Ways, cache line size 32Byte
+I (420) cpu_start: Pro cpu up.
+I (424) cpu_start: Application information:
+I (429) cpu_start: Project name:     mqtt_example
+I (434) cpu_start: App version:      e44972d-dirty
+I (439) cpu_start: Compile time:     Jan  8 2021 10:13:31
+I (446) cpu_start: ELF file SHA256:  5832f2beb53dd43a...
+I (452) cpu_start: ESP-IDF:          v4.2-dev-2084-g98d5b5dfd-dirty
+I (458) cpu_start: Single core mode
+I (463) heap_init: Initializing. RAM available for dynamic allocation:
+I (470) heap_init: At 3FFD5900 len 00026700 (153 KiB): DRAM
+I (476) heap_init: At 3FFFC000 len 00003A10 (14 KiB): DRAM
+I (482) cpu_start: Pro cpu start user code
+I (544) spi_flash: detected chip: generic
+I (544) spi_flash: flash io: dio
+I (544) esp_core_dump_flash: Init core dump to flash
+I (547) esp_core_dump_flash: Found partition 'coredump' @ 3d0000 65536 bytes
+I (556) esp_core_dump_flash: Found core dump 12268 bytes in flash @ 0x3d0000
+I (562) cpu_start: Starting scheduler on PRO CPU.
+I (592) wifi:wifi driver task: 3ffdfca8, prio:23, stack:6656, core=0
+I (592) system_api: Base MAC address is not set
+I (593) system_api: read default base MAC address from EFUSE
+I (606) wifi:wifi firmware version: 8ee1f07
+I (606) wifi:wifi certification version: v7.0
+I (607) wifi:config NVS flash: enabled
+I (611) wifi:config nano formating: disabled
+I (615) wifi:Init data frame dynamic rx buffer num: 32
+I (619) wifi:Init management frame dynamic rx buffer num: 32
+I (625) wifi:Init management short buffer num: 32
+I (629) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (637) wifi:Init static rx buffer num: 10
+I (641) wifi:Init dynamic rx buffer num: 32
+I (647) wifi:Set ps type: 0
+
+I (837) phy: phy_version: 603, 72dfd77, Jul  7 2020, 19:57:05, 0, 2
+I (838) wifi:enable tsf
+I (839) wifi:mode : sta (7c:df:a1:00:77:96)
+I (840) [mwifi, 297]: esp-mdf version: v1.0-107-g1c76187-dirty
+I (846) wifi:mode : sta (7c:df:a1:00:77:96) + softAP (7c:df:a1:00:77:97)
+I (855) wifi:Total power save buffer number: 16
+I (856) wifi:Init max length of beacon: 752/752
+I (861) wifi:Init max length of beacon: 752/752
+I (867) mesh: <nvs>read layer:1
+I (868) mesh: <nvs>read assoc:0
+I (876) wifi:Total power save buffer number: 16
+I (2012) wifi:mode : sta (7c:df:a1:00:77:96)
+I (2014) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:1
+I (2016) [mwifi, 223]: MESH is started
+I (2018) [mqtt_examples, 246]: event_loop_cb, event: 0
+I (2024) [mqtt_examples, 250]: MESH is started
+I (2029) [mqtt_examples, 144]: Node task is running
+I (2035) [mqtt_examples, 115]: Node read task is running
+I (5924) mesh: [S16]VM6047931, 4c:38:d8:24:b2:79, channel:11, rssi:-53
+I (5925) mesh: find router:[ssid_len:9]VM6047931, rssi:-53, 4c:38:d8:24:b2:79(encrypted), new channel:11, old channel:0
+I (5930) mesh: [FIND][ch:0]AP:19, otherID:0, MAP:0, idle:0, candidate:0, root:0[4c:38:d8:24:b2:79]router found
+I (5940) mesh: [FIND:1]find a network, channel:11, cfg<channel:0, router:VM6047931, 00:00:00:00:00:00>
+
+I (5949) [mqtt_examples, 246]: event_loop_cb, event: 22
+I (5950) wifi:mode : sta (7c:df:a1:00:77:96) + softAP (7c:df:a1:00:77:97)
+W (5963) wifi:<MESH AP>adjust channel:1, secondary channel offset:1(40U)
+I (5970) wifi:Total power save buffer number: 16
+W (5978) wifi:<MESH AP>adjust channel:11, secondary channel offset:2(40D)
+I (5981) wifi:Total power save buffer number: 16
+I (6288) mesh: [SCAN][ch:11]AP:6, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:1,i:1][4c:38:d8:24:b2:79]router found<>
+I (6290) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (6296) mesh: 1353, vote myself, router rssi:-52 > voted rc_rssi:-120
+I (6302) mesh: [SCAN:1/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (6619) mesh: [SCAN][ch:11]AP:8, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (6621) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-50], mine:0, voter:0
+I (6627) mesh: [SCAN:2/10]rc[128][7c:df:a1:00:77:97,-50], self[7c:df:a1:00:77:96,-50,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (6944) mesh: [SCAN][ch:11]AP:8, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (6946) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (6953) mesh: [SCAN:3/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (7269) mesh: [SCAN][ch:11]AP:8, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (7271) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-53], mine:0, voter:0
+I (7278) mesh: [SCAN:4/10]rc[128][7c:df:a1:00:77:97,-53], self[7c:df:a1:00:77:96,-53,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (7594) mesh: [SCAN][ch:11]AP:8, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (7596) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (7603) mesh: [SCAN:5/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (7919) mesh: [SCAN][ch:11]AP:6, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (7921) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (7927) mesh: [SCAN:6/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (8244) mesh: [SCAN][ch:11]AP:7, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (8246) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (8252) mesh: [SCAN:7/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (8568) mesh: [SCAN][ch:11]AP:6, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (8571) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (8577) mesh: [SCAN:8/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (8893) mesh: [SCAN][ch:11]AP:5, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (8895) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (8902) mesh: [SCAN:9/10]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (9218) mesh: [SCAN][ch:11]AP:9, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (9220) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (9227) mesh: [SCAN:10/13+x+]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (9543) mesh: [SCAN][ch:11]AP:8, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (9545) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (9552) mesh: [SCAN:11/13+x+]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (9868) mesh: [SCAN][ch:11]AP:7, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (9871) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-53], mine:0, voter:0
+I (9877) mesh: [SCAN:12/13+x+]rc[128][7c:df:a1:00:77:97,-53], self[7c:df:a1:00:77:96,-53,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (10194) mesh: [SCAN][ch:11]AP:9, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][4c:38:d8:24:b2:79]router found<>
+I (10196) mesh: 1315[SCAN]init rc[7c:df:a1:00:77:97,-52], mine:0, voter:0
+I (10203) mesh: [SCAN:13/13+x+]rc[128][7c:df:a1:00:77:97,-52], self[7c:df:a1:00:77:96,-52,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:0.90][128,1,7c:df:a1:00:77:97]
+
+I (10219) mesh: <nvs>write layer:0
+I (10221) mesh: [DONE]connect to router:VM6047931, channel:11, rssi:-52, 4c:38:d8:24:b2:79[layer:0, assoc:0], my_vote_num:1/voter_num:1, rc[7c:df:a1:00:77:97/-52/1]
+I (10357) wifi:new:<11,2>, old:<11,2>, ap:<11,2>, sta:<11,0>, prof:11
+I (10358) wifi:state: init -> auth (b0)
+I (10363) wifi:state: auth -> assoc (0)
+I (10370) wifi:state: assoc -> run (10)
+I (10416) wifi:connected with VM6047931, aid = 2, channel 11, BW20, bssid = 4c:38:d8:24:b2:79
+I (10417) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (10420) wifi:pm start, type: 0
+
+I (10423) mesh: [scan]new scanning time:600ms, beacon interval:300ms
+I (10426) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (10438) mesh: <nvs>write layer:1
+I (10438) [mwifi, 174]: Parent is connected
+I (10442) [mqtt_examples, 246]: event_loop_cb, event: 7
+I (10443) [mwifi, 257]: State represents: 0
+I (10452) [mqtt_examples, 254]: Parent is connected on station interface
+I (10453) mesh: <flush>upstream packets, connections(max):6, waiting:0, upQ:0
+I (10463) [mqtt_examples, 246]: event_loop_cb, event: 11
+I (10473) [mqtt_examples, 246]: event_loop_cb, event: 14
+I (10479) mesh: <flush>root
+I (10481) mesh: [TXQ]<max:32>up(0, be:0), down(0, be:0), mgmt:0, xon(req:0, rsp:0), bcast:0, wnd(0, parent:00:00:00:00:00:00)
+I (10492) mesh: [RXQ]<max:32 = cfg:32 + extra:0>self:0, <max:32 = cfg:32 + extra:0>tods:0
+I (11090) esp_netif_handlers: sta ip: 192.168.0.50, mask: 255.255.255.0, gw: 192.168.0.1
+I (11090) [mqtt_examples, 246]: event_loop_cb, event: 65
+I (11094) [mqtt_examples, 286]: Root obtains the IP address. It is posted by LwIP stack automatically
+I (11106) [mqtt_examples, 40]: Root write task is running
+I (11107) [mqtt_examples, 73]: Root read task is running
+D (11116) [mesh_mqtt, 220]: Other event id:7
+D (11198) [mesh_mqtt, 172]: MQTT_EVENT_CONNECTED
+I (11199) [mqtt_examples, 246]: event_loop_cb, event: 24577
+I (11199) [mqtt_examples, 299]: MQTT connect
+I (11212) mesh: <MESH_NWK_ROOT_TODS_STATE>toDS:1
+I (11212) [mwifi, 257]: State represents: 1
+I (11213) [mqtt_examples, 246]: event_loop_cb, event: 11
+D (11222) [mesh_mqtt, 184]: MQTT_EVENT_SUBSCRIBED, msg_id=52797
+D (11228) [mesh_mqtt, 184]: MQTT_EVENT_SUBSCRIBED, msg_id=25571
+D (11392) [mesh_mqtt, 184]: MQTT_EVENT_SUBSCRIBED, msg_id=52221
+D (11535) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+6 allocations trace (100 entry buffer)
+4 bytes (@ 0x3fff89fc) allocated CPU 0 ccount 0x6ea5ebdc caller 0x4009f5c7:0x400af7b8:0x400af832:0x400af83e
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400af7b8: sys_thread_sem_init at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c:523
+
+0x400af832: sys_thread_sem_get at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c:502
+
+0x400af83e: lwip_get_socket_select_semaphore at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/vfs_lwip.c:53
+
+88 bytes (@ 0x3fff8ce8) allocated CPU 0 ccount 0x6ea5f554 caller 0x4002d0ea:0x400af7e8:0x400af832:0x400af83e
+0x4002d0ea: xQueueGenericCreate at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/freertos/queue.c:391
+
+0x400af7e8: sys_thread_sem_init at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c:530
+
+0x400af832: sys_thread_sem_get at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c:502
+
+0x400af83e: lwip_get_socket_select_semaphore at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/vfs_lwip.c:53
+
+12 bytes (@ 0x3fff8b88) allocated CPU 0 ccount 0x6ea604a8 caller 0x400843f7:0x400af81d:0x400af832:0x400af83e
+0x400843f7: pthread_setspecific at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/pthread/pthread_local_storage.c:248
+
+0x400af81d: sys_thread_sem_init at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c:539
+
+0x400af832: sys_thread_sem_get at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c:502
+
+0x400af83e: lwip_get_socket_select_semaphore at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/port/esp32/vfs_lwip.c:53
+
+1540 bytes (@ 0x3fff8d44) allocated CPU 0 ccount 0x6ea7915c caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8b4c) allocated CPU 0 ccount 0x6ea7b724 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+340 bytes (@ 0x3fff934c) allocated CPU 0 ccount 0x6ea8b86c caller 0x40027adc:0x40034450:0x4011712c:0x4010ae99
+0x40027adc: malloc_internal_wrapper at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:441
+
+0x40034450: esf_buf_alloc at ??:?
+
+0x4011712c: ic_ebuf_alloc at ??:?
+
+0x4010ae99: esp_wifi_internal_tx at ??:?
+
+2004 bytes 'leaked' in trace (6 allocations)
+total allocations 23 total frees 17
+D (14538) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+2 allocations trace (100 entry buffer)
+1540 bytes (@ 0x3fff8dc8) allocated CPU 0 ccount 0x8a95f548 caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8b98) allocated CPU 0 ccount 0x8a961c30 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+1560 bytes 'leaked' in trace (2 allocations)
+total allocations 18 total frees 16
+D (17541) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+2 allocations trace (100 entry buffer)
+1540 bytes (@ 0x3fff8dc8) allocated CPU 0 ccount 0xa739810c caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8b98) allocated CPU 0 ccount 0xa739a7f4 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+1560 bytes 'leaked' in trace (2 allocations)
+total allocations 18 total frees 16
+D (20544) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+2 allocations trace (100 entry buffer)
+1540 bytes (@ 0x3fff8dc8) allocated CPU 0 ccount 0xc3dd082c caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8b98) allocated CPU 0 ccount 0xc3dd2f14 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+1560 bytes 'leaked' in trace (2 allocations)
+total allocations 18 total frees 16
+D (23547) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+3 allocations trace (100 entry buffer)
+1540 bytes (@ 0x3fff8dc8) allocated CPU 0 ccount 0xe0808a40 caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8b98) allocated CPU 0 ccount 0xe080b128 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+340 bytes (@ 0x3fff93d0) allocated CPU 0 ccount 0xe081b270 caller 0x40027adc:0x40034450:0x4011712c:0x4010ae99
+0x40027adc: malloc_internal_wrapper at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:441
+
+0x40034450: esf_buf_alloc at ??:?
+
+0x4011712c: ic_ebuf_alloc at ??:?
+
+0x4010ae99: esp_wifi_internal_tx at ??:?
+
+1900 bytes 'leaked' in trace (3 allocations)
+total allocations 18 total frees 15
+D (26550) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+2 allocations trace (100 entry buffer)
+1540 bytes (@ 0x3fff9454) allocated CPU 0 ccount 0xfd241404 caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8d44) allocated CPU 0 ccount 0xfd243aec caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+1560 bytes 'leaked' in trace (2 allocations)
+total allocations 17 total frees 15
+D (29553) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (32556) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (35559) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (38562) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (41565) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (44568) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (47571) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (50574) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (53577) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+2 allocations trace (100 entry buffer)
+1540 bytes (@ 0x3fff9a5c) allocated CPU 0 ccount 0xfee40da0 caller 0x4009f5c7:0x400a04ee:0x400a4d58:0x400a539d
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x400a04ee: pbuf_alloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/pbuf.c:288
+
+0x400a4d58: tcp_pbuf_prealloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:264
+
+0x400a539d: tcp_write at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:610
+
+20 bytes (@ 0x3fff8d5c) allocated CPU 0 ccount 0xfee43448 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a4dc1
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a4dc1: tcp_create_segment at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/tcp_out.c:168
+
+1560 bytes 'leaked' in trace (2 allocations)
+total allocations 17 total frees 15
+D (56580) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (59583) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+6 allocations trace (100 entry buffer)
+16 bytes (@ 0x3ffdb444) allocated CPU 0 ccount 0x382d3860 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb46c) allocated CPU 0 ccount 0x382d55ac caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb494) allocated CPU 0 ccount 0x382d6c5c caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb4a8) allocated CPU 0 ccount 0x382d8f6c caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffe63f8) allocated CPU 0 ccount 0x382dc354 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb480) allocated CPU 0 ccount 0x382ddaf4 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+96 bytes 'leaked' in trace (6 allocations)
+total allocations 21 total frees 21
+D (62586) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (65589) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (68593) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (71596) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 15
+D (74599) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 16
+D (77603) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+0 allocations trace (100 entry buffer)
+0 bytes 'leaked' in trace (0 allocations)
+total allocations 15 total frees 16
+D (80607) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+D (83610) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+D (86613) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+D (89616) [mqtt_examples, 161]: Node send, size: 79, data: {"type":"heartbeat", "self": "7cdfa1007796", "parent":"4c38d824b279","layer":1}
+D (90611) [mesh_mqtt, 216]: MQTT_EVENT_ERROR
+E (90612) MQTT_CLIENT: Error write data or timeout, written len = 0, errno=0
+D (90613) [mesh_mqtt, 178]: MQTT_EVENT_DISCONNECTED
+I (90617) [mqtt_examples, 246]: event_loop_cb, event: 24578
+I (90624) [mqtt_examples, 313]: MQTT disconnected
+I (90629) mesh: <MESH_NWK_ROOT_TODS_STATE>toDS:0
+I (90634) [mwifi, 257]: State represents: 0
+I (90638) [mqtt_examples, 246]: event_loop_cb, event: 11
+W (90644) MQTT_CLIENT: Publish: Losing qos0 data when client not connected
+14 allocations trace (100 entry buffer)
+48 bytes (@ 0x3fff89c0) allocated CPU 0 ccount 0x1d47e288 caller 0x40027aa4:0x400fb0e2:0x400fb10d:0x400d2004
+0x40027aa4: wifi_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:65
+
+0x400fb0e2: mesh_malloc at ??:?
+
+0x400fb10d: esp_mesh_create_context at ??:?
+
+0x400d2004: esp_mesh_send at ??:?
+
+137 bytes (@ 0x3fffa0e8) allocated CPU 0 ccount 0x1d47ec10 caller 0x40027aa4:0x400fb0e2:0x400fb126:0x400d2004
+0x40027aa4: wifi_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:65
+
+0x400fb0e2: mesh_malloc at ??:?
+
+0x400fb126: esp_mesh_create_context at ??:?
+
+0x400d2004: esp_mesh_send at ??:?
+
+48 bytes (@ 0x3fff8c94) allocated CPU 0 ccount 0x39eb60bc caller 0x40027aa4:0x400fb0e2:0x400fb10d:0x400d2004
+0x40027aa4: wifi_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:65
+
+0x400fb0e2: mesh_malloc at ??:?
+
+0x400fb10d: esp_mesh_create_context at ??:?
+
+0x400d2004: esp_mesh_send at ??:?
+
+137 bytes (@ 0x3fffa178) allocated CPU 0 ccount 0x39eb6a44 caller 0x40027aa4:0x400fb0e2:0x400fb126:0x400d2004
+0x40027aa4: wifi_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:65
+
+0x400fb0e2: mesh_malloc at ??:?
+
+0x400fb126: esp_mesh_create_context at ??:?
+
+0x400d2004: esp_mesh_send at ??:?
+
+96 bytes (@ 0x3fffa208) allocated CPU 0 ccount 0x568a1018 caller 0x40031400:0x4013dece:0x40133311:0x4012e0e4
+0x40031400: _realloc_r at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/newlib/heap.c:63
+
+0x4013dece: __ssprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32s2-elf/src/newlib/newlib/libc/stdio/vfprintf.c:321
+
+0x40133311: _svfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32s2-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1773 (discriminator 1)
+
+0x4012e0e4: asprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32s2-elf/src/newlib/newlib/libc/stdio/asprintf.c:76
+
+48 bytes (@ 0x3fff8c30) allocated CPU 0 ccount 0x568f0420 caller 0x40027aa4:0x400fb0e2:0x400fb10d:0x400d2004
+0x40027aa4: wifi_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:65
+
+0x400fb0e2: mesh_malloc at ??:?
+
+0x400fb10d: esp_mesh_create_context at ??:?
+
+0x400d2004: esp_mesh_send at ??:?
+
+137 bytes (@ 0x3fffa26c) allocated CPU 0 ccount 0x568f0dd4 caller 0x40027aa4:0x400fb0e2:0x400fb126:0x400d2004
+0x40027aa4: wifi_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/esp_wifi/esp32s2/esp_adapter.c:65
+
+0x400fb0e2: mesh_malloc at ??:?
+
+0x400fb126: esp_mesh_create_context at ??:?
+
+0x400d2004: esp_mesh_send at ??:?
+
+16 bytes (@ 0x3ffdb444) allocated CPU 0 ccount 0x5fd14204 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb46c) allocated CPU 0 ccount 0x5fd1d1b4 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb494) allocated CPU 0 ccount 0x5fd25ae8 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb4a8) allocated CPU 0 ccount 0x5fd2eeec caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffe63f8) allocated CPU 0 ccount 0x5fd3973c caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3ffdb480) allocated CPU 0 ccount 0x5fd41adc caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
+
+16 bytes (@ 0x3fff89ac) allocated CPU 0 ccount 0x603f39c0 caller 0x4009f5c7:0x4009f646:0x4009f6c3:0x400a6210
+0x4009f5c7: mem_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/mem.c:237
+
+0x4009f646: do_memp_malloc_pool at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:254
+
+0x4009f6c3: memp_malloc at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/memp.c:350 (discriminator 2)
+
+0x400a6210: sys_timeout_abs at C:/Users/Peter/.espressif/esp-mdf/esp-idf/components/lwip/lwip/src/core/timeouts.c:199
